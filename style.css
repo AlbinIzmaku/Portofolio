@@ -1,0 +1,436 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rgb(7, 193, 196);
+  display: block;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ ul {
+  left: 0;
+  width: 100%;
+}
+
+ul {
+  background-color: rgb(7, 193, 196);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: -100%;
+  transition: all 1s;
+  border-radius: 2px;
+}
+ul li {
+  text-align: center;
+  height: 20%;
+}
+ul li :hover {
+  color: rgb(7, 193, 196);
+  font-size: 30px;
+  border-radius: 50%;
+  background-color: black;
+}
+ul li a {
+  font-size: 25px;
+  text-decoration: none;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+}
+#home .me {
+  display: block;
+  max-width: 100%;
+  height: 60vh;
+  text-align: center;
+}
+#home .me img {
+  width: 80%;
+  margin: auto;
+  border-radius: 5px;
+}
+#home .me img:hover {
+  box-shadow: 5px 5px 15px rgb(7, 193, 196);
+}
+#home .aboutMe {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: calc(40vh - 50px);
+  margin: auto;
+}
+#home .aboutMe h3 {
+  color: rgb(7, 193, 196);
+}
+#home .aboutMe p {
+  color: rgb(7, 193, 196);
+}
+
+#about .fiekauk {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#about .fiekauk .fiek {
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: orange;
+}
+#about .fiekauk .fiek h4 {
+  color: rgb(7, 193, 196);
+}
+#about .fiekauk .fiek p {
+  color: rgb(7, 193, 196);
+}
+#about .fiekauk .fiek:hover {
+  box-shadow: 3px 3px 5px rgb(232, 195, 9);
+}
+#about .fiekauk .auk {
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: orangered;
+}
+#about .fiekauk .auk h4 {
+  color: rgb(7, 193, 196);
+}
+#about .fiekauk .auk p {
+  color: rgb(7, 193, 196);
+}
+#about .fiekauk .auk:hover {
+  box-shadow: 3px 3px 5px rgb(232, 128, 9);
+}
+#about .hobby {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+#about .hobby .football {
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: green;
+}
+#about .hobby .football h4 {
+  color: rgb(7, 193, 196);
+}
+#about .hobby .football p {
+  color: rgb(7, 193, 196);
+}
+#about .hobby .football:hover {
+  box-shadow: 3px 3px 5px rgb(9, 232, 80);
+}
+#about .hobby .chess {
+  width: 50%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+#about .hobby .chess h4 {
+  color: rgb(7, 193, 196);
+}
+#about .hobby .chess p {
+  color: rgb(7, 193, 196);
+}
+#about .hobby .chess:hover {
+  box-shadow: 3px 3px 5px rgb(231, 222, 226);
+}
+
+#blog {
+  height: 800px;
+}
+#blog .transform2d {
+  border: 1px solid red;
+  color: rgb(7, 193, 196);
+  width: 200px;
+  background-color: red;
+  margin: 0 30px;
+  transition: transform 1s;
+}
+#blog .transform2d:hover {
+  transform: matrix(1.5, -0.3, 1, 1, 0, 0);
+}
+#blog .transform3d {
+  border: 1px solid burlywood;
+  color: rgb(7, 193, 196);
+  width: 200px;
+  background-color: burlywood;
+  margin: 50px 30px;
+  transition: transform 1s;
+}
+#blog .transform3d:hover {
+  transform: rotateX(40deg);
+  transform: rotateY(30deg);
+  transform: rotateZ(15deg);
+}
+#blog .transition {
+  border: 1px solid darkslateblue;
+  text-align: center;
+  color: rgb(7, 193, 196);
+  width: 200px;
+  background-color: darkslateblue;
+  margin: 0 30px;
+  transition: width 0.5s, height 1s, transform 1s;
+  transition-timing-function: ease-out;
+}
+#blog .transition:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+#blog .animation {
+  border: 1px solid green;
+  margin: 50px 30px;
+  color: rgb(7, 193, 196);
+  width: 200px;
+  text-align: center;
+  background-color: gold;
+  border-radius: 50%;
+  position: relative;
+  -webkit-animation-name: animation;
+          animation-name: animation;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+@-webkit-keyframes animation {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    left: 200px;
+    top: 200px;
+  }
+  50% {
+    left: 200px;
+    top: 0;
+  }
+  75% {
+    top: 200px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes animation {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    left: 200px;
+    top: 200px;
+  }
+  50% {
+    left: 200px;
+    top: 0;
+  }
+  75% {
+    top: 200px;
+    left: 0;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+#more {
+  height: 250px;
+}
+#more .projects {
+  color: rgb(7, 193, 196);
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  margin: auto;
+}
+#more .bealeCipher {
+  float: left;
+  color: rgb(7, 193, 196);
+  background-color: white;
+  width: 45%;
+  border-radius: 10px;
+}
+#more .bealeCipher a {
+  text-decoration: none;
+}
+#more .bealeCipher a:hover {
+  font-size: 18px;
+}
+#more .pi {
+  color: rgb(7, 193, 196);
+  background-color: white;
+  width: 45%;
+  border-radius: 10px;
+  float: right;
+  margin-bottom: 10px;
+}
+#more .pi a {
+  text-decoration: none;
+}
+#more .pi a:hover {
+  font-size: 18px;
+}
+#more .row::after {
+  content: "";
+  float: none;
+  display: table;
+}
+
+.zhvillimi {
+  color: rgb(7, 193, 196);
+  border: 1px solid green;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  text-align: center;
+}
+.zhvillimi a {
+  text-decoration: none;
+}
+.zhvillimi a:hover {
+  font-size: 18px;
+}
+
+#contact {
+  margin-top: 20px;
+  text-align: center;
+}
+#contact div {
+  margin-top: 20px;
+}
+#contact img {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  margin: 0 15px;
+}
+#contact a {
+  text-decoration: none;
+}
+#contact a:hover {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 515px) and (max-width: 768px) {
+  #home {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+  .me {
+    width: 100%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutMe {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  nav {
+    text-align: center;
+  }
+  nav #check {
+    display: none;
+  }
+  nav .checkbtn {
+    display: none;
+  }
+  nav ul {
+    position: static;
+    display: block;
+    height: 40px;
+    text-align: center;
+  }
+  nav ul li {
+    float: left;
+    margin: 0 15px;
+  }
+  #home {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+  }
+  #home .me {
+    width: 50%;
+    margin: auto;
+  }
+  #home .me img {
+    max-width: 80%;
+    margin-top: -30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .aboutMe {
+    width: 50%;
+  }
+  #blog {
+    display: flex;
+    margin-top: 20px;
+    height: 500px;
+  }
+  #blog .firstrow {
+    width: 100%;
+  }
+  #blog .firstrow .transform2d {
+    width: 50%;
+    margin: auto;
+  }
+  #blog .firstrow .transform3d {
+    width: 50%;
+  }
+  #blog .secondrow {
+    width: 100%;
+  }
+  #blog .secondrow .transition {
+    width: 50%;
+    margin: auto;
+  }
+  #blog .secondrow .animation {
+    width: 50%;
+  }
+}/*# sourceMappingURL=style.css.map */
